@@ -386,28 +386,59 @@ display: inline-block;
 border-color: var(--main-color);
 }
 /* End about */
-/* start footer */
+/* Start contact */
 .contact{
   padding-top: var(--padding);
-  padding-bottom:var(--padding);
+  padding-bottom: var(--padding);
 }
-.contact .text h2{
-  color: var(--main-color);
+.contact .info {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  text-align: center;
+}
+.contact .info .lable {
+  font-size: 35px;
   font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+
 }
-.contact .text {
-  margin-top: 100px;
+.contact .info a {
+  display: block;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--main-color);
+}
+.contact .info .icon {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.contact .info .icon i {
+  margin-left: 10px;
+  color: var(--secondary-color);
+
+}
+@media (max-width:767) {
+  .contact .info .lable,
+  .contact .info a {
+    font-size: 25px;
+  }
+  
+}
+footer{
+
   text-align: center;
+  background-color: var(--secondary-color);
+  height: 80px;
+  padding: 15px;
+  color: white;
+  font-size: 18;
 }
-.contact .icon{
-  display: flex;
-  text-align: center;
-  padding-left:380px ;
+footer span{
+  font-weight: bold;
+color: var(--main-color);
 }
-.contact .icon i {
-  padding: 10px;
-  flex-direction: row;  
-}
-/* End footer */
+/* End contact */

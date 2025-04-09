@@ -260,7 +260,7 @@ line-height: var(--linehigt);
 
 }
 .services .services-content .image img {
-  width: 260px;
+  width: 260px; 
 }
 @media (max-width: 1199px ) {
   .image-column{
@@ -306,4 +306,108 @@ line-height: var(--linehigt);
 margin-bottom: 0;
 }
 /* End portfolio */
+/* Start about */
+.about{
+  padding-top: var(--padding);
+  padding-bottom:calc(var(--padding) + 60px); 
+}
+.about-content {
+  margin-top:100px;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+}
+@media (max-width:991px){
+.about .about-content {
+  flex-direction: column;
+  text-align: center;
+}
+}
+.about .about-content .image{
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+@media (max-width:991px){
+  .about .about-content .image{
+    margin: 0 auto 60px;
 
+  }
+}
+
+.about .about-content .image::before{
+  content: "";
+  position: absolute;
+  background-color: #ebeced;
+  width: 100px;
+  height: calc(100% + 80px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.about .about-content .image::after{
+content: "";
+position: absolute;
+width: 120px;
+height: 300px;
+border-left: 80px solid var(--main-color);
+border-bottom: 80px solid var(--main-color);
+z-index: -1;
+right: -150px;
+bottom: 10px;
+}
+@media (max-width:991px){
+  .about .about-content .image::before,
+  .about .about-content .image::after{
+    display: none;
+   
+  }
+  }
+.about .about-content .image img{
+  max-width: 100%;
+}
+
+.about .about-content .text {
+ flex-basis: calc(100% - 450px);
+}
+.about .about-content .text p:first-of-type{
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 60px;
+}
+
+.about .about-content .text p:last-of-type{
+line-height: 2;
+color: var(--baccolor);
+}
+.about .about-content .text hr {
+width: 50%;
+display: inline-block;
+border-color: var(--main-color);
+}
+/* End about */
+/* start footer */
+.contact{
+  padding-top: var(--padding);
+  padding-bottom:var(--padding);
+}
+.contact .text h2{
+  color: var(--main-color);
+  font-weight: 800;
+}
+.contact .text {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.contact .icon{
+  display: flex;
+  text-align: center;
+  padding-left:380px ;
+}
+.contact .icon i {
+  padding: 10px;
+  flex-direction: row;  
+}
+/* End footer */
